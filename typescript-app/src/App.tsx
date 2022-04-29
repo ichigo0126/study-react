@@ -117,5 +117,4 @@ type CustomType<T> ={
 //CustomTypeの使用方法
 const strObj: CustomType<string> = {val: "A"};
 
-
 export default App;
