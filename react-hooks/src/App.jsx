@@ -1,13 +1,10 @@
 import {useState} from "react";
-import { useFetchUsers } from "./hooks/useFetchUsers"
+import {useFetchUsers } from "./hooks/useFetchUsers"
 
 export const App = () => {
   //カスタムフックのしよう
   //関数を実行し返却値を分割代入で受け取る
-  const { userList, onClickFetchUser} = useFetchUsers();
-  console.log(userList,); //[{ id : 1}]
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const { userList, isLoading, isError, onClickFetchUser} =  useFetchUsers();
 
   return(
     <div>
@@ -23,4 +20,5 @@ export const App = () => {
     </div>
   );
 };
+
 export default App;
